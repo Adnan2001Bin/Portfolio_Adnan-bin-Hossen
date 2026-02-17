@@ -1,6 +1,5 @@
-import { motion } from 'framer-motion';
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
-import Blob from './Blob';
+import { motion } from "framer-motion";
+import Blob from "./Blob";
 
 interface HeroProps {
   onWorksClick: () => void;
@@ -8,7 +7,7 @@ interface HeroProps {
 
 const Hero = ({ onWorksClick }: HeroProps) => {
   const textVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 30 },
     visible: (i: number) => ({
       opacity: 1,
       y: 0,
@@ -21,91 +20,89 @@ const Hero = ({ onWorksClick }: HeroProps) => {
   };
 
   const handleDownloadCV = () => {
-    window.open('https://drive.google.com/file/d/1PY3OMAEGVtk3l4FQiQNq6yEYpBarbS_a/view?usp=sharing', '_blank');
+    window.open(
+      "https://drive.google.com/file/d/1PY3OMAEGVtk3l4FQiQNq6yEYpBarbS_a/view?usp=sharing",
+      "_blank",
+    );
   };
 
-  const benefits = [
-    "Front-end & Back-end Proficiency",
-    "Scalable & Efficient Solutions", 
-    "Machine Learning & Automation"
-  ];
-
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 pt-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 sm:px-6">
       {/* Blob Background */}
       <Blob />
 
       {/* Content */}
-      <div className="relative z-10 w-full max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
-        <div className="flex-1 text-left">
-          
-          {/* Label */}
+      <div className="relative z-10 text-center max-w-5xl mx-auto">
+        <div className="flex flex-col items-center">
+          {/* Greeting */}
           <motion.p
-            className="text-sm font-bold tracking-[0.2em] uppercase text-primary mb-6"
+            className="text-[10px] sm:text-xs md:text-sm font-semibold tracking-[0.2em] sm:tracking-[0.3em] uppercase text-foreground mb-2 sm:mb-4"
             custom={0}
             variants={textVariants}
             initial="hidden"
             animate="visible"
           >
-            Hello I am Adnan!
+            Hello!
           </motion.p>
-          
-          {/* Headline */}
-          <motion.h1
-            className="font-display text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-foreground mb-8 leading-[1.1]"
+
+          {/* Main Intro Text */}
+          <motion.p
+            className="font-display text-lg sm:text-xl md:text-2xl lg:text-3xl text-foreground/90 leading-relaxed max-w-xs sm:max-w-lg"
             custom={1}
             variants={textVariants}
             initial="hidden"
             animate="visible"
           >
-            Architecting <span className="font-serif italic font-normal">scalable</span> full-stack solutions and <span className="font-serif italic font-normal">seamless</span> experiences
-          </motion.h1>
+            I'm <span className="font-semibold">Adnan Bin Hossen</span>, a
+            Full-stack Developer.
+          </motion.p>
 
-          {/* Benefits / Checkmarks */}
-          <motion.div 
-            className="flex flex-wrap gap-x-8 gap-y-4 mb-10"
+          {/* Summary Text */}
+          <motion.p
+            className="text-xs sm:text-sm md:text-base text-foreground/60 leading-relaxed max-w-xs sm:max-w-md mt-3 sm:mt-4"
             custom={2}
             variants={textVariants}
             initial="hidden"
             animate="visible"
           >
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center gap-2 text-foreground/80 font-medium md:text-lg">
-                <CheckCircle2 className="w-5 h-5 text-green-500" />
-                <span>{benefit}</span>
-              </div>
-            ))}
-          </motion.div>
-
-          {/* Buttons */}
-          <motion.div
-            className="flex flex-wrap items-center gap-4"
-            custom={3}
-            variants={textVariants}
-            initial="hidden"
-            animate="visible"
-          >
-            <motion.button
-              onClick={onWorksClick}
-              className="group flex items-center gap-2 px-8 py-4 bg-foreground text-background rounded-full font-medium hover:bg-foreground/90 transition-colors"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              View My Work
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </motion.button>
-            
-            <motion.button
-              onClick={handleDownloadCV}
-              className="px-8 py-4 text-foreground rounded-full font-medium border border-foreground/20 hover:bg-foreground/5 transition-colors"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              Download CV
-            </motion.button>
-          </motion.div>
+            Specialized in building end-to-end web applications with modern frontend and backend technologies.
+          </motion.p>
         </div>
+
+        {/* CTA Buttons */}
+        <motion.div
+          className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mt-6 sm:mt-10"
+          custom={3}
+          variants={textVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <motion.button
+            onClick={onWorksClick}
+            className="magnetic-target group flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-foreground text-background rounded-full font-medium text-sm sm:text-base hover:bg-foreground/90 transition-colors"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            View My Work
+          </motion.button>
+          <motion.button
+            onClick={handleDownloadCV}
+            className="magnetic-target px-6 sm:px-8 py-3 sm:py-4 text-foreground rounded-full font-medium text-sm sm:text-base border border-foreground/20 hover:bg-foreground/5 transition-colors"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            Download CV
+          </motion.button>
+        </motion.div>
       </div>
+
+      {/* Decorative Circle */}
+      <motion.div
+        className="absolute left-[15%] top-1/2 -translate-y-1/2 w-8 h-8 border border-foreground/20 rounded-full hidden lg:block"
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 1, duration: 0.5 }}
+      />
     </section>
   );
 };

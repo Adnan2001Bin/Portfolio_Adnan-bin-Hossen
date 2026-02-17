@@ -1,20 +1,20 @@
 import { motion } from 'framer-motion';
-import { Linkedin, Github, MessageCircle } from 'lucide-react';
+import { Linkedin, Github, Facebook } from 'lucide-react';
 
 const socials = [
   { 
     icon: Linkedin, 
-    href: 'https://linkedin.com/in/adnanbinhossen', 
+    href: 'https://www.linkedin.com/in/adnan-bin-hossen/', 
     label: 'LinkedIn' 
   },
   { 
-    icon: MessageCircle, 
-    href: 'https://wa.me/yourwhatsapp', 
-    label: 'WhatsApp' 
+    icon: Facebook, 
+    href: 'https://www.facebook.com/adnanbin.hossen', 
+    label: 'Facebook' 
   },
   { 
     icon: Github, 
-    href: 'https://github.com/adnanbinhossen', 
+    href: 'https://github.com/Adnan2001Bin', 
     label: 'GitHub' 
   },
 ];

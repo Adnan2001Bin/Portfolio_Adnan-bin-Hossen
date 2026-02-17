@@ -1,29 +1,57 @@
-import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Github, Linkedin, Globe } from 'lucide-react';
+import { motion } from "framer-motion";
+import { Mail, Phone, MapPin, Github, Linkedin, Globe } from "lucide-react";
 
 const skills = {
-  'Programming Languages': ['Python', 'JavaScript', 'TypeScript', 'Java', 'HTML', 'CSS'],
-  'Frontend': ['React.js', 'React Native', 'Next.js', 'Tailwind CSS', 'Redux', 'Framer Motion'],
-  'Backend': ['Node.js', 'Express.js', 'RESTful APIs'],
-  'Database': ['MongoDB', 'Mongoose', 'Supabase'],
-  'Authentication': ['JWT', 'Firebase', 'Appwrite', 'Supabase Auth'],
-  'Tools & Platforms': ['Git', 'GitHub', 'Postman', 'Vercel', 'Netlify', 'Docker'],
-  'Data & Design': ['Power BI', 'Pandas', 'NumPy', 'Figma', 'Canva', 'Photoshop'],
+  "Programming Languages": [
+    "Python",
+    "JavaScript",
+    "TypeScript",
+    "Java",
+    "HTML",
+    "CSS",
+  ],
+  Frontend: [
+    "React.js",
+    "React Native",
+    "Next.js",
+    "Tailwind CSS",
+    "Redux",
+    "Framer Motion",
+  ],
+  Backend: ["Node.js", "Express.js", "RESTful APIs"],
+  Database: ["MongoDB", "Mongoose", "Supabase"],
+  Authentication: ["JWT", "Firebase", "Appwrite", "Supabase Auth"],
+  "Tools & Platforms": [
+    "Git",
+    "GitHub",
+    "Postman",
+    "Vercel",
+    "Netlify",
+    "Docker",
+  ],
+  "Data & Design": [
+    "Power BI",
+    "Pandas",
+    "NumPy",
+    "Figma",
+    "Canva",
+    "Photoshop",
+  ],
 };
 
 const strengths = [
-  'Project Management',
-  'Public Relations',
-  'Teamwork',
-  'Time Management',
-  'Leadership',
-  'Effective Communication',
-  'Critical Thinking',
+  "Project Management",
+  "Public Relations",
+  "Teamwork",
+  "Time Management",
+  "Leadership",
+  "Effective Communication",
+  "Critical Thinking",
 ];
 
 const languages = [
-  { name: 'English', level: 'Professional Proficiency' },
-  { name: 'Bangla', level: 'Native' },
+  { name: "English", level: "Professional Proficiency" },
+  { name: "Bangla", level: "Native" },
 ];
 
 const AboutContent = () => {
@@ -45,7 +73,7 @@ const AboutContent = () => {
 
   return (
     <motion.div
-      className="max-w-4xl mx-auto space-y-12"
+      className="max-w-4xl mx-auto space-y-8 sm:space-y-10 md:space-y-12"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
@@ -54,15 +82,15 @@ const AboutContent = () => {
       <motion.section variants={itemVariants} className="space-y-4">
         <h3 className="subtitle-text">Contact</h3>
         <div className="flex flex-wrap gap-4">
-          <a 
-            href="tel:+8801878710544" 
+          <a
+            href="tel:+8801878710544"
             className="flex items-center gap-2 px-4 py-2 bg-muted rounded-full text-sm hover:bg-muted/80 transition-colors"
           >
             <Phone className="w-4 h-4" />
             +8801878710544
           </a>
-          <a 
-            href="mailto:adnan2001bin@gmail.com" 
+          <a
+            href="mailto:adnan2001bin@gmail.com"
             className="flex items-center gap-2 px-4 py-2 bg-muted rounded-full text-sm hover:bg-muted/80 transition-colors"
           >
             <Mail className="w-4 h-4" />
@@ -72,8 +100,8 @@ const AboutContent = () => {
             <MapPin className="w-4 h-4" />
             Ashulia, Dhaka
           </span>
-          <a 
-            href="https://github.com/Adnan2001Bin" 
+          <a
+            href="https://github.com/Adnan2001Bin"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-4 py-2 bg-muted rounded-full text-sm hover:bg-muted/80 transition-colors"
@@ -81,8 +109,8 @@ const AboutContent = () => {
             <Github className="w-4 h-4" />
             GitHub
           </a>
-          <a 
-            href="https://www.linkedin.com/in/adnan-bin-hossen/" 
+          <a
+            href="https://www.linkedin.com/in/adnan-bin-hossen/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-4 py-2 bg-muted rounded-full text-sm hover:bg-muted/80 transition-colors"
@@ -90,8 +118,8 @@ const AboutContent = () => {
             <Linkedin className="w-4 h-4" />
             LinkedIn
           </a>
-          <a 
-            href="https://adnan-bin-hossenebon.vercel.app/" 
+          <a
+            href="https://adnan-bin-hossenebon.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-4 py-2 bg-muted rounded-full text-sm hover:bg-muted/80 transition-colors"
@@ -105,11 +133,13 @@ const AboutContent = () => {
       {/* Profile Section */}
       <motion.section variants={itemVariants} className="space-y-6">
         <h3 className="subtitle-text">Profile</h3>
-        <p className="text-foreground/90 text-lg md:text-xl leading-relaxed">
-          Ambitious Full-Stack Web Developer passionate about building user-centric applications and automating
-          workflows. Proficient in both front-end and back-end development, I specialize in creating scalable and
-          efficient solutions. With a keen interest in machine learning and automation, I stay ahead of industry trends
-          to drive innovation and deliver impactful results.
+        <p className="text-foreground/90 text-base sm:text-lg md:text-xl leading-relaxed">
+          Ambitious Full-Stack Web Developer passionate about building
+          user-centric applications and automating workflows. Proficient in both
+          front-end and back-end development, I specialize in creating scalable
+          and efficient solutions. With a keen interest in machine learning and
+          automation, I stay ahead of industry trends to drive innovation and
+          deliver impactful results.
         </p>
       </motion.section>
 
@@ -119,35 +149,47 @@ const AboutContent = () => {
         <div className="p-6 bg-muted/50 rounded-2xl border border-border">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
             <div>
-              <h4 className="font-display font-semibold text-lg">Web Developer</h4>
-              <p className="text-primary font-medium">TAF Technology (Remote)</p>
+              <h4 className="font-display font-semibold text-lg">
+                Web Developer
+              </h4>
+              <p className="text-primary font-medium">
+                TAF Technology (Remote)
+              </p>
             </div>
-            <p className="text-sm text-muted-foreground mt-2 md:mt-0">November 2025 – Present</p>
+            <p className="text-sm text-muted-foreground mt-2 md:mt-0">
+              November 2025 – Present
+            </p>
           </div>
           <ul className="space-y-2 text-muted-foreground text-sm md:text-base">
             <li className="flex gap-2">
               <span className="text-primary">•</span>
-              Developed and maintained web applications using React.js, Node.js, Express.js, and Tailwind CSS.
+              Developed and maintained web applications using React.js, Node.js,
+              Express.js, and Tailwind CSS.
             </li>
             <li className="flex gap-2">
               <span className="text-primary">•</span>
-              Built React Native mobile applications with optimized performance and seamless API integration.
+              Built React Native mobile applications with optimized performance
+              and seamless API integration.
             </li>
             <li className="flex gap-2">
               <span className="text-primary">•</span>
-              Collaborated with designers and backend teams to deliver scalable and efficient features.
+              Collaborated with designers and backend teams to deliver scalable
+              and efficient features.
             </li>
             <li className="flex gap-2">
               <span className="text-primary">•</span>
-              Integrated RESTful APIs and optimized frontend performance for better user experience.
+              Integrated RESTful APIs and optimized frontend performance for
+              better user experience.
             </li>
             <li className="flex gap-2">
               <span className="text-primary">•</span>
-              Worked with Git, GitHub, and project management tools to follow agile development workflows.
+              Worked with Git, GitHub, and project management tools to follow
+              agile development workflows.
             </li>
             <li className="flex gap-2">
               <span className="text-primary">•</span>
-              Contributed to debugging, bug fixing, and improving UI/UX across web and mobile platforms.
+              Contributed to debugging, bug fixing, and improving UI/UX across
+              web and mobile platforms.
             </li>
           </ul>
         </div>
@@ -156,7 +198,7 @@ const AboutContent = () => {
       {/* Technical Skills Section */}
       <motion.section variants={itemVariants} className="space-y-6">
         <h3 className="subtitle-text">Technical Skills</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
           {Object.entries(skills).map(([category, items]) => (
             <motion.div
               key={category}
@@ -182,7 +224,7 @@ const AboutContent = () => {
       </motion.section>
 
       {/* Strengths & Languages */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
         <motion.section variants={itemVariants} className="space-y-4">
           <h3 className="subtitle-text">Strengths</h3>
           <div className="flex flex-wrap gap-2">
@@ -201,9 +243,14 @@ const AboutContent = () => {
           <h3 className="subtitle-text">Languages</h3>
           <div className="space-y-3">
             {languages.map((lang) => (
-              <div key={lang.name} className="flex items-center justify-between p-4 bg-muted/50 rounded-xl">
+              <div
+                key={lang.name}
+                className="flex items-center justify-between p-4 bg-muted/50 rounded-xl"
+              >
                 <span className="font-medium">{lang.name}</span>
-                <span className="text-sm text-muted-foreground">{lang.level}</span>
+                <span className="text-sm text-muted-foreground">
+                  {lang.level}
+                </span>
               </div>
             ))}
           </div>

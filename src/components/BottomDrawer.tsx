@@ -42,8 +42,8 @@ const BottomDrawer = ({ isOpen, onClose, title, children }: BottomDrawerProps) =
             </div>
 
             {/* Header */}
-            <div className="flex items-center justify-between px-6 md:px-12 py-4 border-b border-border">
-              <h2 className="font-display text-2xl md:text-3xl font-semibold">{title}</h2>
+            <div className="flex items-center justify-between px-4 sm:px-6 md:px-12 py-3 sm:py-4 border-b border-border">
+              <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-semibold">{title}</h2>
               <motion.button
                 onClick={onClose}
                 className="magnetic-target p-2 rounded-full hover:bg-muted transition-colors"
@@ -56,7 +56,7 @@ const BottomDrawer = ({ isOpen, onClose, title, children }: BottomDrawerProps) =
             </div>
 
             {/* Scrollable Content */}
-            <div className="overflow-y-auto max-h-[calc(90vh-120px)] px-6 md:px-12 py-8">
+            <div className="overflow-y-auto max-h-[calc(90vh-120px)] px-4 sm:px-6 md:px-12 py-4 sm:py-6 md:py-8">
               {children}
             </div>
           </motion.div>
