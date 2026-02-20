@@ -65,7 +65,8 @@ const Hero = ({ onWorksClick }: HeroProps) => {
             initial="hidden"
             animate="visible"
           >
-            Specialized in building end-to-end web applications with modern frontend and backend technologies.
+            Specialized in building end-to-end web applications with modern
+            frontend and backend technologies.
           </motion.p>
         </div>
 
