@@ -21,7 +21,7 @@ const Hero = ({ onWorksClick }: HeroProps) => {
 
   const handleDownloadCV = () => {
     window.open(
-      "https://drive.google.com/file/d/1nx-ZjuBtaixUTuZMk4qdcMz55Vv-h1DQ/view?usp=drive_link",
+      "https://drive.google.com/file/d/12HW8pVIbxe-shVCfu3FC6Ri8Qd-QO4Hl/view?usp=drive_link",
       "_blank",
     );
   };
