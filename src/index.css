@@ -177,7 +177,7 @@
   /* Iridescent Blob Effect */
   .blob {
     @apply relative;
-    width: 500px;
+    width: 600px;
     height: 500px;
     background: linear-gradient(
       135deg,
@@ -267,17 +267,13 @@
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
     transform: rotate(0deg) scale(1);
   }
-  25% {
-    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  33% {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     transform: rotate(5deg) scale(1.02);
   }
-  50% {
-    border-radius: 50% 60% 30% 60% / 30% 60% 70% 40%;
+  66% {
+    border-radius: 70% 30% 40% 60% / 60% 70% 30% 40%;
     transform: rotate(-5deg) scale(0.98);
-  }
-  75% {
-    border-radius: 60% 40% 60% 30% / 70% 30% 50% 60%;
-    transform: rotate(3deg) scale(1.01);
   }
 }
 
